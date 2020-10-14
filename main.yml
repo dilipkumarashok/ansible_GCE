@@ -19,7 +19,7 @@
             project: "{{ gcp_project }}"
             service_account_file: "{{ gcp_cred_file }}"
             auth_kind: "{{ gcp_cred_kind }}"
-            register: gce_ip
+          register: gce_ip
         - name: Bring up the instance in the zone.
           gcp_compute_instance:
               name: "{{ zone }}"
