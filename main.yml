@@ -9,7 +9,7 @@
         zone: "us-central1-a"
         region: "us-central1"
         machine_type: "e2-micro"
-        image: "ubuntu-1604-xenial-v20200729"
+        image: "ubuntu-1604-xenial-v20201014"
       
      tasks:
         - name: Create an IP address for instance
@@ -28,7 +28,7 @@
                 - auto_delete: true
                   boot: true
                   initialize_params:
-                      source_image: "{{ image }}"
+                    source_image: "{{ image }}"
               network_interfaces:
                 - access_configs:
                     - name: External NAT
